@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 20px;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: red;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .menu-icon:hover {
+        color: #ddd;
+    }
+
+    #menu-toggle:checked+.menu {
+        display: flex;
+        padding-left: 0;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
+.split {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.centered {
+    text-align: left;
+}
+
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    width: 50%;
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.heading {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.clickherebutton {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: rgb(223, 80, 80);
+    color: white;
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+@media (min-width: 768px) {
+    .split {
+        display: flex;
+        height: 100vh;
+    }
+
+    .content {
+        width: 50%;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .background-image {
+        width: 50%;
+        background-image: url('./img/pexels-robin-stickel-70497.jpg');
+        background-size: cover;
+        height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .split {
+        width: 100%;
+    }
+
+    .background-image {
+        height: 300px;
+        background-image: url('./img/pexels-robin-stickel-70497.jpg');
+        background-size: cover;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 5vw);
+    grid-gap: 1.5rem;
+    padding-left: 10rem;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+figure {
+    margin: 0 0 1rem;
+}
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gradient-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ecca58, #eb9ac6);
+}
+
+.card2 {
+    width: 30rem;
+    height: fit-content;
+    background-color: rgb(223, 80, 80);
+    padding: 20px;
+    color: white;
+}
+
+.clickherebutton2 {
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    align-content: left;
+}
+
+@media (max-width: 767px) {
+    .split {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .background-image {
+        height: 300px;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card2 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .gallery {
+        display: block;
+        padding-left: 0rem;
+    }
+
+    .gallery__item {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .gallery__img {
+        width: 100%;
+        height: auto;
+    }
+}
